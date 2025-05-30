@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:ui/ui/onboarding/onboarding.dart';
-import 'package:ui/ui/screens/home.dart';
 
 void main() {
   runApp(const FigmaUi());

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ui/constant/theme.dart';
+import 'package:ui/ui/screens/home.dart';
 
 class OnBoarding extends StatelessWidget {
   const OnBoarding({super.key});
@@ -46,7 +47,12 @@ class OnBoarding extends StatelessWidget {
                 top: 68,
                 right: 20,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Home()),
+                    );
+                  },
                   child: Text(
                     'Skip',
                     style: TextStyle(
@@ -163,7 +169,14 @@ class OnBoarding extends StatelessWidget {
                         ],
                       ),
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Home(),
+                            ),
+                          );
+                        },
                         style: ElevatedButton.styleFrom(
                           shape: const CircleBorder(),
                           padding: const EdgeInsets.all(16),
