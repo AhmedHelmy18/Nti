@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:task_ui/ui/component/container_icon.dart';
 
 class BodyScreen extends StatefulWidget {
-  const BodyScreen({super.key});
+  const BodyScreen({super.key, required this.onChangeColor});
+
+  final VoidCallback onChangeColor;
 
   @override
   State<BodyScreen> createState() => _BodyScreenState();
@@ -68,6 +70,25 @@ class _BodyScreenState extends State<BodyScreen> {
                 onPressed: () => handleOperation("clear"),
               ),
             ],
+          ),
+          const SizedBox(height: 30),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              minimumSize: const Size(200, 50),
+              backgroundColor: Colors.grey[500],
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(15),
+              ),
+            ),
+            onPressed: widget.onChangeColor,
+            child: const Text(
+              "Change Color",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+                color: Colors.white,
+              ),
+            ),
           ),
         ],
       ),
