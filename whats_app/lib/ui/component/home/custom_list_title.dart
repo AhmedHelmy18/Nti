@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:whats_app/ui/model/model_chat.dart';
+import 'package:whats_app/ui/screens/chat.dart';
 
 class CustomWidgetListTitle extends StatelessWidget {
   const CustomWidgetListTitle({super.key, required this.chat});
@@ -8,35 +9,43 @@ class CustomWidgetListTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: CircleAvatar(
-        radius: 30,
-        backgroundImage: NetworkImage(chat.avatarUrl),
-      ),
-      title: Text(
-        chat.name,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 20,
-          fontWeight: FontWeight.w500,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => Chat()),
+        );
+      },
+      child: ListTile(
+        leading: CircleAvatar(
+          radius: 30,
+          backgroundImage: NetworkImage(chat.avatarUrl),
         ),
-      ),
-      subtitle: Text(
-        chat.message,
-        overflow: TextOverflow.ellipsis,
-        maxLines: 1,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 15,
-          fontWeight: FontWeight.w500,
+        title: Text(
+          chat.name,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
         ),
-      ),
-      trailing: Text(
-        chat.time,
-        style: const TextStyle(
-          color: Colors.white,
-          fontSize: 15,
-          fontWeight: FontWeight.w500,
+        subtitle: Text(
+          chat.message,
+          overflow: TextOverflow.ellipsis,
+          maxLines: 1,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        trailing: Text(
+          chat.time,
+          style: const TextStyle(
+            color: Colors.white,
+            fontSize: 15,
+            fontWeight: FontWeight.w500,
+          ),
         ),
       ),
     );
