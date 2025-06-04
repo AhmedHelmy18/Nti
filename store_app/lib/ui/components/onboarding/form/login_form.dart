@@ -122,22 +122,20 @@ class _SignupFormState extends State<LoginForm> {
                         ),
                       ),
                       onPressed: () {
-                        if (_formKey.currentState!.validate()) {
-                          emailController.clear();
-                          passwordController.clear();
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text(
-                                'Reset successful',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                        emailController.clear();
+                        passwordController.clear();
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                              'Reset successful',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
                               ),
                             ),
-                          );
-                        }
+                          ),
+                        );
                       },
                       child: const Text(
                         'Reset',

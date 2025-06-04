@@ -198,7 +198,6 @@ class _SignupFormState extends State<SignupForm> {
                         ),
                       ),
                       onPressed: () {
-                        if (_formKey.currentState!.validate()) {
                           emailController.clear();
                           passwordController.clear();
                           nameController.clear();
@@ -216,7 +215,7 @@ class _SignupFormState extends State<SignupForm> {
                               ),
                             ),
                           );
-                        }
+
                       },
                       child: const Text(
                         'Reset',
