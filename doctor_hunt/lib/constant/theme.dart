@@ -7,6 +7,5 @@ ColorScheme colorScheme = ColorScheme.fromSeed(
   secondary: Color.fromARGB(255, 151, 229, 143),
   onSecondary: Colors.white,
   surface: Colors.white,
-  onSurface: Colors.black,
   onSurfaceVariant: Colors.grey,
 );

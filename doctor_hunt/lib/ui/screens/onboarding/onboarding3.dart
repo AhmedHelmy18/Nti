@@ -1,6 +1,6 @@
-import 'package:doctor_hunt/ui/components/onboarding/onboarding/body/onboarding_body.dart';
-import 'package:doctor_hunt/ui/components/onboarding/onboarding/common/custom_buttons.dart';
-import 'package:doctor_hunt/ui/components/onboarding/onboarding/common/custom_text_body.dart';
+import 'package:doctor_hunt/ui/components/onboarding/body/onboarding_body.dart';
+import 'package:doctor_hunt/ui/components/onboarding/common/custom_buttons.dart';
+import 'package:doctor_hunt/ui/components/onboarding/common/custom_text_body.dart';
 import 'package:doctor_hunt/ui/screens/data/home_page.dart';
 import 'package:flutter/material.dart';
 

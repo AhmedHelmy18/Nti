@@ -1,5 +1,0 @@
-flutter_native_splash:
-    color: "#ffffff"
-    image: assets/images/Vector.png
-    android: true
-    ios: true
