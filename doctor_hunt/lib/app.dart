@@ -1,5 +1,5 @@
+import 'package:doctor_hunt/ui/screens/data/doctor_live_chat.dart';
 import 'package:doctor_hunt/ui/screens/data/home_page.dart';
-import 'package:doctor_hunt/ui/screens/onboarding/onboarding1.dart';
 import 'package:flutter/material.dart';
 
 class DoctorHunt extends StatelessWidget {
