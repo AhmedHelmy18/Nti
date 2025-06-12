@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/ui/components/common/search_text_field.dart';
 import 'package:flutter/material.dart';
 
 class HomeHeader extends StatelessWidget {
@@ -56,28 +57,7 @@ class HomeHeader extends StatelessWidget {
           top: 150,
           left: 20,
           right: 20,
-          child: Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(8),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.1),
-                  spreadRadius: 1,
-                  blurRadius: 10,
-                ),
-              ],
-            ),
-            child: const TextField(
-              decoration: InputDecoration(
-                hintText: "Search....",
-                prefixIcon: Icon(Icons.search),
-                suffixIcon: Icon(Icons.close),
-                border: InputBorder.none,
-                contentPadding: EdgeInsets.symmetric(vertical: 15),
-              ),
-            ),
-          ),
+          child: SearchTextField(hintText: "Search...."),
         ),
       ],
     );
