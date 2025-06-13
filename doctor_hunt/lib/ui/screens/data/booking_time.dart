@@ -1,4 +1,5 @@
 import 'package:doctor_hunt/ui/components/common/appbar.dart';
+import 'package:doctor_hunt/ui/components/common/background_image.dart';
 import 'package:doctor_hunt/ui/components/common/booking_time/body/available_time_slot.dart';
 import 'package:doctor_hunt/ui/components/common/booking_time/body/show_day.dart';
 import 'package:doctor_hunt/ui/components/common/booking_time/body/show_no_time.dart';
@@ -36,12 +37,7 @@ class _BookingTimeState extends State<BookingTime> {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned.fill(
-            child: Image.asset(
-              "assets/images/01_Splash screen.png",
-              fit: BoxFit.cover,
-            ),
-          ),
+          BackgroundImage(),
           Column(
             children: [
               Appbar(title: 'Select Time'),

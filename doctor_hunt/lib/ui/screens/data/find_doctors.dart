@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/ui/components/common/background_image.dart';
 import 'package:doctor_hunt/ui/components/common/find_doctor/core/doctor_object.dart';
 import 'package:doctor_hunt/ui/components/common/appbar.dart';
 import 'package:doctor_hunt/ui/components/common/find_doctor/widgets/doctor_card.dart';
@@ -12,15 +13,10 @@ class FindDoctors extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          Positioned.fill(
-            child: Image.asset(
-              "assets/images/01_Splash screen.png",
-              fit: BoxFit.cover,
-            ),
-          ),
+          BackgroundImage(),
           Column(
             children: [
-              const Appbar(title: 'Find Doctors',),
+              const Appbar(title: 'Find Doctors'),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
