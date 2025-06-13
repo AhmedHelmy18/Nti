@@ -1,3 +1,4 @@
+import 'package:doctor_hunt/ui/components/common/custom_icon_button_back.dart';
 import 'package:flutter/material.dart';
 
 class ChatHeader extends StatelessWidget {
@@ -18,18 +19,7 @@ class ChatHeader extends StatelessWidget {
             onTap: () {
               Navigator.pop(context);
             },
-            child: Container(
-              height: screenHeight * 0.05,
-              width: screenWidth * 0.1,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                color: Color.fromARGB(255, 255, 255, 255),
-              ),
-              child: const Icon(
-                Icons.arrow_back_ios_new_outlined,
-                color: Color(0xff7180a0),
-              ),
-            ),
+            child: CustomIconButtonBack(),
           ),
         ),
         Positioned(

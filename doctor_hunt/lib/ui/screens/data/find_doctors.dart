@@ -1,5 +1,5 @@
 import 'package:doctor_hunt/ui/components/common/find_doctor/core/doctor_object.dart';
-import 'package:doctor_hunt/ui/components/common/find_doctor/widgets/appbar.dart';
+import 'package:doctor_hunt/ui/components/common/appbar.dart';
 import 'package:doctor_hunt/ui/components/common/find_doctor/widgets/doctor_card.dart';
 import 'package:doctor_hunt/ui/components/common/search_text_field.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +12,6 @@ class FindDoctors extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          // Background Image
           Positioned.fill(
             child: Image.asset(
               "assets/images/01_Splash screen.png",
@@ -21,7 +20,7 @@ class FindDoctors extends StatelessWidget {
           ),
           Column(
             children: [
-              const Appbar(),
+              const Appbar(title: 'Find Doctors',),
               const SizedBox(height: 20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18.0),
